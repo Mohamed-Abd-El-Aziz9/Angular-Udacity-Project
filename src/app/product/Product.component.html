@@ -1,0 +1,23 @@
+<div class=" p-5 h-25">
+</div>
+<div class="container ">
+    <div class="row">
+
+        <div class="col-lg-4 col-md-6  " *ngFor=" let item of list">
+            <div class="item m-2 p-4 bg-black text-center">
+                <h4 class="h6 h-book text-center w-100 mt-4 py-2 bg-primary text-white "> {{item.name}}</h4>
+              
+                <img [src]="item.url" class="w-100 my-3 " alt="">
+                <p class=" text-white fw-bold">{{item.price}} $</p>
+                <p class=" text-white ">{{item.description}}</p>
+               
+
+               <button class="btn btn-primary mt-3" (click)="addItemToCart(item)">Add to cart </button>
+              
+              
+            </div>
+        </div>
+     
+    </div>
+
+</div>

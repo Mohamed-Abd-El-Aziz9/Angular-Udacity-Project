@@ -1,0 +1,35 @@
+
+<div *ngIf="product.length == 0 " class="  p-5 h-25">
+
+    <h5 class="mt-5">Your Cart is Empty !</h5>
+</div>
+<div *ngIf="product.length > 0 " class=" ms-2 p-5 h-25">
+
+    <button (click)="emptyCart()" class="btn btn-danger m-5"> Empty Cart <i class="fa-solid fa-trash text-white"></i></button>
+
+</div>
+
+<div class=" container ">
+    <div *ngFor="let pro of product ">
+
+        <div class=" d-flex mt-4 w-50">
+            <img src="{{pro.url}}" class="w-25 rounded-2" alt="">
+
+            <div class="w-50 ps-5 align-self-center h-100">
+                <h6>Product type : {{pro.name}}</h6>
+                <h6>Price : {{pro.price}} $</h6>
+
+                <button (click)="removeItem(pro)" class="btn btn-danger"> remove item <i class="fa-solid fa-trash text-white ps-2"></i></button>
+
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="product.length > 0 " class=" pt-5 w-25 text-white">
+
+        <h6 class="mt-4 bg-success p-2 rounded-3">Total Price = {{TotalPrice}}</h6>
+    
+    </div>
+
+
+</div>

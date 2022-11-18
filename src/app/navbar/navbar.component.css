@@ -1,0 +1,15 @@
+.nav-link:hover , .navbar-brand:hover {
+    color: tan !important;
+}
+.navbar-brand {
+    transition: all 1s ;
+
+}
+nav {
+    position: fixed;
+    left: 0px ;
+    right: 0px;
+    top: 0px;
+    
+    z-index: 99; 
+}
